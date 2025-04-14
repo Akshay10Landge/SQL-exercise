@@ -11,9 +11,7 @@ CREATE TABLE Products (
   Name VARCHAR(255) NOT NULL ,
   Price DECIMAL NOT NULL ,
   Manufacturer INTEGER NOT NULL,
-  PRIMARY KEY (Code), 
-  FOREIGN KEY (Manufacturer) REFERENCES Manufacturers(Code)
-) ENGINE=INNODB;
+  );
 
 INSERT INTO Manufacturers(Code,Name) VALUES(1,'Sony');
 INSERT INTO Manufacturers(Code,Name) VALUES(2,'Creative Labs');
@@ -32,4 +30,7 @@ INSERT INTO Products(Code,Name,Price,Manufacturer) VALUES(7,'CD drive',90,2);
 INSERT INTO Products(Code,Name,Price,Manufacturer) VALUES(8,'Printer',270,3);
 INSERT INTO Products(Code,Name,Price,Manufacturer) VALUES(9,'Toner cartridge',66,3);
 INSERT INTO Products(Code,Name,Price,Manufacturer) VALUES(10,'DVD burner',180,2);
+
+select * from Manufacturers;
+select * from Products;
 
